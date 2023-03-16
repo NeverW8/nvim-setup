@@ -2,6 +2,7 @@
 vim.g.mapleader = ","
 vim.keymap.set("n", "<leader>o", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
+vim.keymap.set("n", " ", "/")
 
 -- Nerdtree
 vim.keymap.set("n", "<leader>n", vim.cmd.NvimTreeToggle)
