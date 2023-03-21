@@ -7,10 +7,8 @@ I finally did an attempt to go over to NeoVim and I think I've managed to do qui
 I'm using packer to install & setup all the plugins, defined as such:
 
 ```lua
- use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+  use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
   use("nvim-treesitter/playground")
-  use("theprimeagen/harpoon")
-  use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
@@ -40,8 +38,6 @@ I'm using packer to install & setup all the plugins, defined as such:
 
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
-  use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
 
 ```
 ## Plugin manager
@@ -54,6 +50,10 @@ Just run packersync to install all the plugins.
 ```
 PackerSync
 ```
+
+## Looks
+
+![alt text](nvim.png "neovim")
 
 ## Can I modify it?
 
