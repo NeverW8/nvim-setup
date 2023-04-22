@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+    -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
@@ -22,10 +22,10 @@ use {
 }
 
   use({
-	  'Mofiqul/dracula.nvim',
-	  as = 'dracula',
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
 	  config = function()
-		  vim.cmd('colorscheme dracula')
+		  vim.cmd('colorscheme rose-pine')
 	  end
   })
 
@@ -44,9 +44,14 @@ use {
 
   use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
   use("nvim-treesitter/playground")
+  use("theprimeagen/harpoon")
+  use("theprimeagen/refactoring.nvim")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
+-- cheat sheet cheating
+  use('RishabhRD/popfix')
+  use('RishabhRD/nvim-cheat.sh')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -73,6 +78,8 @@ use {
 
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
+  use("eandrju/cellular-automaton.nvim")
+  use("laytan/cloak.nvim")
 
 end)
 
