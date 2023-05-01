@@ -69,6 +69,9 @@ use {
 		  {'saadparwaiz1/cmp_luasnip'},
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
+		  
+		  -- indent my brain
+		  {'lukas-reineke/indent-blankline.nvim'},
 
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
