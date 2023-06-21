@@ -69,7 +69,7 @@ use {
 		  {'saadparwaiz1/cmp_luasnip'},
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
-		  
+
 		  -- indent my brain
 		  {'lukas-reineke/indent-blankline.nvim'},
 
@@ -83,6 +83,9 @@ use {
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
+  -- indenting
+  use("lukas-reineke/indent-blankline.nvim")
+
 
 end)
 
