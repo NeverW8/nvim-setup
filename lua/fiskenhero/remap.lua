@@ -4,11 +4,9 @@ vim.keymap.set("n", "<leader>o", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.keymap.set("n", " ", "/")
 
+
 -- Nerdtree
 vim.keymap.set("n", "<leader>n", vim.cmd.NvimTreeToggle)
-
--- greatest remap ever
---vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -35,3 +33,6 @@ vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true,
 
 -- new tab with leader + t
 vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
+
+-- nvim lsp formatting
+vim.keymap.set("n", "<leader>c", vim.lsp.buf.format)

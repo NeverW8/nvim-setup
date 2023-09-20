@@ -42,7 +42,7 @@ use {
   })
 
 
-  use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+  use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", indent = {enable = true}})
   use("nvim-treesitter/playground")
   use("theprimeagen/harpoon")
   use("theprimeagen/refactoring.nvim")
@@ -70,22 +70,22 @@ use {
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'hrsh7th/cmp-nvim-lua'},
 
-		  -- indent my brain
-		  {'lukas-reineke/indent-blankline.nvim'},
-
 		  -- Snippets
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
-
+  use("NeverW8/nvim_pw.nvim")
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   -- indenting
   use("lukas-reineke/indent-blankline.nvim")
-
+  -- prettier
+ use('neovim/nvim-lspconfig')
+ use('jose-elias-alvarez/null-ls.nvim')
+ use('MunifTanjim/prettier.nvim')
 
 end)
 
