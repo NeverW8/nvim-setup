@@ -36,3 +36,6 @@ vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
 
 -- nvim lsp formatting
 vim.keymap.set("n", "<leader>c", vim.lsp.buf.format)
+
+-- copy to system clipboard
+vim.keymap.set("v", "<leader>v", [["+y]])
