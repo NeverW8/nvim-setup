@@ -9,7 +9,7 @@ local local_plugins = {
                 bundled_plugin_cheatsheets = true,
                 include_only_installed_plugins = true,
                 telescope_mappings = {
-                    ["<leader>fc"] = "Cheatsheet",
+                    ["<leader>fc"] = "cheatsheet",
                 }
             })
         end
@@ -46,9 +46,14 @@ local local_plugins = {
                 current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
             })
         end
+    },
+    {
+        "github/copilot.vim",
+        config = function()
+            vim.api.nvim_set_keymap("i", "<C-A>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+            vim.g.copilot_enabled = true
+        end
     }
 }
 
 return local_plugins
-
-
