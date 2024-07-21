@@ -17,9 +17,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Telescope FF
-local builtin = require "telescope.builtin"
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+--local builtin = require "telescope.builtin"
+--vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+--vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
 --asd
 vim.keymap.set("n", "<leader><leader>", function()
@@ -40,5 +40,7 @@ vim.keymap.set("v", "<leader>v", [["+y]])
 
 -- run :Format in visual mode to format the selected text
 vim.keymap.set("v", "<leader>b", ":Format<CR>")
-
 vim.keymap.set("n", "<leader>b", ":FormatWrite<CR>")
+
+-- Yamllint, imagine working with Kubernetes
+--vim.api.nvim_buf_set_keymap(0, "n", "<leader>yl", ":!yamllint %<CR>", { noremap = true, silent = true })
