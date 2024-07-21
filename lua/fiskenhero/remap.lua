@@ -41,3 +41,6 @@ vim.keymap.set("v", "<leader>v", [["+y]])
 -- run :Format in visual mode to format the selected text
 vim.keymap.set("v", "<leader>b", ":Format<CR>")
 vim.keymap.set("n", "<leader>b", ":FormatWrite<CR>")
+
+-- Yamllint, imagine working with Kubernetes
+--vim.api.nvim_buf_set_keymap(0, "n", "<leader>yl", ":!yamllint %<CR>", { noremap = true, silent = true })
