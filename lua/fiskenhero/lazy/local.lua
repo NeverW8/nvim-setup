@@ -51,7 +51,7 @@ local local_plugins = {
         "github/copilot.vim",
         config = function()
             vim.api.nvim_set_keymap("i", "<C-A>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-            vim.g.copilot_enabled = true
+            vim.g.copilot_enabled = false
         end
     }
 }

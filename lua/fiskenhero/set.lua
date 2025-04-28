@@ -37,3 +37,5 @@ vim.opt.listchars = {
     space = "·",
     eol = "↴",
 }
+vim.opt.clipboard = 'unnamedplus'
+
