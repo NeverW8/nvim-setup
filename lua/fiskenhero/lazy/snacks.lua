@@ -3,9 +3,11 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
+        -- enable syntax/errors inlay Hints
+        inlay_hints = { enabled = true },
         bigfile = { enabled = true },
         dashboard = { enabled = true },
-        explorer = { enabled = false},
+        explorer = { enabled = false },
         indent = { enabled = true },
         input = { enabled = true },
         notifier = {
@@ -63,4 +65,3 @@ return {
         })
     end,
 }
-

@@ -28,9 +28,15 @@ end)
 
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+vim.keymap.set("i", "<Tab>", "<Tab>")
 vim.keymap.set("n", "<leader>1", function()
   vim.cmd "Copilot enable"
   vim.notify("Copilot enabled")
+end)
+vim.keymap.set("n", "<leader>2", function()
+  vim.cmd "Copilot disable"
+  vim.notify("Copilot Fired...")
 end)
 
 -- new tab with leader + t

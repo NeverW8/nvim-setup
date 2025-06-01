@@ -124,6 +124,23 @@ return {
                 header = "",
                 prefix = "",
             },
+            virtual_text = {
+                prefix = "●",
+                format = function(diagnostic)
+                    local severity_map = {
+                        [vim.diagnostic.severity.ERROR] = "Error: ",
+                        [vim.diagnostic.severity.WARN] = "Warning: ",
+                        [vim.diagnostic.severity.INFO] = "Info: ",
+                        [vim.diagnostic.severity.HINT] = "Hint: ",
+                    }
+                    local prefix = severity_map[diagnostic.severity] or ""
+                    return prefix .. diagnostic.message
+                end,
+            },
+            signs = true,
+            underline = true,
+            update_in_insert = false,
+            severity_sort = true,
         })
 
         -- Completion setup
@@ -138,7 +155,7 @@ return {
             },
             mapping = cmp.mapping.preset.insert({
                 ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-                ["<TAB>"] = cmp.mapping.select_next_item(cmp_select),
+                ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
